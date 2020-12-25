@@ -5289,8 +5289,6 @@ RZ_IPI int rz_cmd_debug(void *data, const char *input) {
 			}
 			// Reopen and rebase the original file
 			rz_core_cmd0 (core, "oo");
-			// Remove registers from the flag list
-			rz_core_cmd0 (core, "~dr-");
 			break;
 		case '?': // "do?"
 		default:
