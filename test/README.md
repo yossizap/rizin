@@ -119,9 +119,12 @@ Example commands tests for the other `db/` folders:
 * **FILE** is the path of the file used for the test
 * **ARGS** (optional) are the command line argument passed to rizin (e.g -b 16)
 * **CMDS** are the commands to be executed by the test
-* **EXPECT** is the expected output of the test
+* **EXPECT** is the expected output of the test from stdout
+* **EXPECT_ERR** is the expected output of the test from stderr. Can be specified in addition or instead of `EXPECT`
 * **BROKEN** (optional) is 1 if the tests is expected to be fail, 0 or unspecified otherwise
 * **TIMEOUT** (optional) is the number of seconds to wait before considering the test timeout
+* **REGEX_OUT** (optional) apply given regex on stdout before comparing the ouput to `EXPECT` (e.g. `REGEXP_OUT=([a-zA-Z]+)`)
+* **REGEX_ERR** (optional) apply given regex on stderr before comparing the ouput to `EXPECT_ERR`
 
 You must end the test by adding RUN keyword
 
